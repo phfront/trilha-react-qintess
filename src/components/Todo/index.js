@@ -6,13 +6,13 @@ export default function Todo() {
     id: 1,
     text: 'Mercado',
     items: [
-      { check: false, text: 'Arroz' },
-      { check: false, text: 'Feijão' },
-      { check: false, text: 'Batata' },
-      { check: false, text: 'Óleo' },
-      { check: false, text: 'Macarrão' },
-      { check: false, text: 'Leite' },
-      { check: false, text: 'Ovos' }
+      { checked: false, text: 'Arroz' },
+      { checked: false, text: 'Feijão' },
+      { checked: false, text: 'Batata' },
+      { checked: false, text: 'Óleo' },
+      { checked: false, text: 'Macarrão' },
+      { checked: false, text: 'Leite' },
+      { checked: false, text: 'Ovos' }
     ]
   }
 
@@ -24,7 +24,7 @@ export default function Todo() {
           todo.items.map((item, index) => (
             <div className="todo-item" key={index}>
               <label>
-                <input type="checkbox" name={`todo${todo.id}item${item.id}`} />
+                <input type="checkbox" checked={item.checked} name={`todo${todo.id}item${item.id}`} />
                 <span>{item.text}</span>
               </label>
             </div>
